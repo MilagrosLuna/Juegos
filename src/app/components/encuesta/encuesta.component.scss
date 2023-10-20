@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos adicionales específicos para la pregunta de radio */
+.form-group label {
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+/* Estilos para las respuestas de radio */
+.form-group input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Estilo para el botón de radio seleccionado */
+.form-group input[type="radio"]:checked + label::before {
+  background-color: #007bff;
+}
+
+/* Fuente de Roboto (si no se ha incluido en el proyecto) */
+body,
+h2,
+label,
+p,
+small,
+.form-control,
+.btn-primary,
+.mt-3 a {
+  font-family: "Roboto", sans-serif;
+}
+
+.invalid {
+  color: red;
+}

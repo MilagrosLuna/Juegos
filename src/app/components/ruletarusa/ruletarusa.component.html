@@ -1,0 +1,18 @@
+<div class="roulette-container">
+  <h1>Juego de Ruleta Rusa</h1>
+  <p class="puntuacion">Puntuación inicial: {{ puntuacion }}</p>
+  <button (click)="jugar()" class="play-button">Jugar</button>
+  <p class="resultado">{{ resultado }}</p>
+  <p class="contador">Vidas restantes: {{ vidas }}</p>
+  <p class="contador">Muertes: {{ muertes }}</p>
+  <img
+    *ngIf="resultado === '¡Oh no! La ruleta rusa ha cobrado una vida... 💥💀'"
+    src="assets/a.png"
+    alt="Ruleta Rusa"
+  />
+  <img
+    *ngIf="resultado === '¡Has sobrevivido! 🎉'"
+    src="assets/b.png"
+    alt="Ruleta Rusa"
+  />
+</div>

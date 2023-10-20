@@ -1,0 +1,13 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card text-white bg-dark" style="width: 20rem">
+    <div class="card-header">
+      <h5 class="card-title">Nombre de usuario: {{ usuario?.displayName }}</h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text">Email de usuario: {{ usuario.email }}</p>
+      <p class="card-text">
+        Fecha de creación: {{ formatearFecha(usuario?.metadata.creationTime) }}
+      </p>
+    </div>
+  </div>
+</div>

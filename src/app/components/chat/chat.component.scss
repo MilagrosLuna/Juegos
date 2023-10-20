@@ -1,0 +1,83 @@
+.cardContainer {
+  width: 1200px;
+  height: 800px;
+}
+
+.card-header {
+  background-color: #1976d2;
+  font-weight: 700;
+  color: white;
+}
+.contendedorMensajes {
+  //     background-image: url("../../../../assets/images/fondo-chat.png");
+  //      background-position: center;
+  //      background-size: cover;
+  background-color: rgb(198, 243, 243);
+  height: 600px; /* Altura fija para contenedor de mensajes */
+  overflow-y: auto; /* Barra de desplazamiento vertical cuando sea necesario */
+  padding: 10px; /* Agregar un relleno adicional para separar los mensajes del borde */
+}
+
+.card-body {
+  padding: 0;
+}
+
+.imgEnviar:active {
+  transform: scale(0.8);
+}
+
+.enviado,
+.recibido {
+  display: flex;
+  flex-direction: column;
+  min-width: 50.01%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.enviado {
+  float: right;
+  background-color: teal;
+  color: white;
+  text-align: left;
+}
+
+.recibido {
+  float: left;
+  background-color: gray;
+  color: white;
+  text-align: left;
+}
+
+.enviado strong,
+.recibido strong {
+  font-size: small;
+  margin-bottom: 2px;
+}
+
+.enviado p,
+.recibido p {
+  margin-bottom: 1px;
+  display: inline-block;
+}
+
+.enviado span,
+.recibido span {
+  font-size: x-small;
+  text-align: right;
+}
+
+.contendedorMensajes {
+  overflow: scroll;
+  padding: 0.3rem;
+}
+
+.contendedorMensajes::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+}

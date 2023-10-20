@@ -1,0 +1,159 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        id="nombre"
+        placeholder="Nombre"
+        formControlName="nombre"
+      />
+      <div *ngIf="form.controls['nombre'].errors != null">
+        <small
+          class="invalid"
+          *ngIf="
+            form.controls['nombre'].errors!['required'] &&
+            form.controls['nombre'].touched
+          "
+          >Debe ingresar el nombre..</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="nombre">Apellido:</label>
+      <input
+        type="text"
+        id="Apellido"
+        placeholder="Apellido"
+        formControlName="Apellido"
+      />
+      <div *ngIf="form.controls['Apellido'].errors != null">
+        <small
+          class="invalid"
+          *ngIf="
+            form.controls['Apellido'].errors!['required'] &&
+            form.controls['Apellido'].touched
+          "
+          >Debe ingresar el Apellido..</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="edad">Edad:</label>
+      <input
+        type="number"
+        id="edad"
+        placeholder="Edad"
+        formControlName="edad"
+        min="18"
+        max="99"
+      />
+      <div *ngIf="form.controls['edad'].errors != null">
+        <small
+          class="invalid"
+          *ngIf="
+            form.controls['edad'].errors!['required'] &&
+            form.controls['edad'].errors!['required'] &&
+            form.controls['edad'].touched
+          "
+          >Debe ingresar su edad..
+        </small>
+        <small class="invalid" *ngIf="form.controls['edad'].errors['min']">
+          La edad debe ser mayor o igual a 18 años.
+        </small>
+        <small class="invalid" *ngIf="form.controls['edad'].errors['max']">
+          La edad debe ser menor o igual a 99 años.
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Número de Teléfono:</label>
+      <input
+        type="tel"
+        id="telefono"
+        placeholder="Telefono"
+        formControlName="telefono"
+        pattern="^[0-9]{1,10}$"
+      />
+      <div *ngIf="form.controls['telefono'].errors != null">
+        <small
+          class="invalid"
+          *ngIf="
+            form.controls['telefono'].errors!['required'] &&
+            form.controls['telefono'].touched
+          "
+          >Debe ingresar el telefono..</small
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Te gusto este trabajo??</label>
+      <div>
+        <label>
+          <input
+            type="radio"
+            name="pregunta1"
+            value="opcion1"
+            formControlName="pregunta1"
+          />
+          SI!!
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="pregunta1"
+            value="opcion2"
+            formControlName="pregunta1"
+          />
+          NO!!
+        </label>
+      </div>
+      <div *ngIf="form.controls['pregunta1'].errors != null">
+        <small
+          class="invalid"
+          *ngIf="
+            form.controls['pregunta1'].errors!['required'] &&
+            form.controls['pregunta1'].touched
+          "
+          >Debe responder..</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Que juegos agregarias?</label>
+      <textarea name="pregunta2" formControlName="pregunta2"></textarea>
+      <div *ngIf="form.controls['pregunta2'].errors != null">
+        <small
+          class="invalid"
+          *ngIf="
+            form.controls['pregunta2'].errors!['required'] &&
+            form.controls['pregunta2'].touched
+          "
+          >Debe responder..</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Cual fue tu juego favorito?</label>
+      <select name="pregunta3" formControlName="pregunta3">
+        <option value="opcion1">El preguntados</option>
+        <option value="opcion2">El ahorcado</option>
+        <option value="opcion3">El mayor o menor</option>
+        <option value="opcion4">La ruleta rusa</option>
+      </select>
+      <div *ngIf="form.controls['pregunta3'].errors != null">
+        <small
+          class="invalid"
+          *ngIf="
+            form.controls['pregunta3'].errors!['required'] &&
+            form.controls['pregunta3'].touched
+          "
+          >Debe seleccionar una opcion..</small
+        >
+      </div>
+    </div>
+
+    <button type="submit">Enviar Encuesta</button>
+  </form>
+</div>

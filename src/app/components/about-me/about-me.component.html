@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="user-profile" *ngIf="userData">
+    <div>
+      <h2 class="user-heading">{{ userData.name }}</h2>
+      <a href="{{ userData.html_url }}" target="_blank" class="user-links"
+        >GitHub</a
+      >
+      <img [src]="userData.avatar_url" alt="Avatar" class="user-avatar" />
+      <p class="user-paragraphs">{{ userData.bio }}</p>
+      <p class="user-details">Username: {{ userData.login }}</p>
+      <p class="user-details">Ubicación: {{ userData.location }}</p>
+      <p class="user-details">Tipo: {{ userData.type }}</p>
+      <p class="user-details">ID: {{ userData.id }}</p>
+      <p class="user-details">
+        Número de repositorios públicos: {{ userData.public_repos }}
+      </p>
+      <p class="user-details">Número de seguidores: {{ userData.followers }}</p>
+      <p class="user-details">Número de seguidos: {{ userData.following }}</p>
+      <p class="user-details">
+        Creado en: {{ userData.created_at | date : "dd/MM/yyyy" }}
+      </p>
+      <p class="user-details">
+        Última actualización: {{ userData.updated_at | date : "dd/MM/yyyy" }}
+      </p>
+      <p class="user-paragraphs">
+        Mi juego es la ruleta rusa, el jugador posee 3 vidas al gastar las 3
+        pierde, solo gana si puede tener las 3 vidas al final!
+      </p>
+    </div>
+  </div>
+</div>

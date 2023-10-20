@@ -1,0 +1,109 @@
+/* Estilo para el contenedor principal del formulario de registro */
+.main {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .container.register {
+    width: 30%;
+    padding: 30px;
+    border: 1px solid #703ff8;
+    border-radius: 5px;
+    color: #fff;
+    background: radial-gradient(circle, #000 0%, transparent 80%), #000;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(118, 33, 255, 0.959);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .errorMessage{
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Estilo para el encabezado del formulario de registro */
+  .container.register h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  .formulario{
+    width: 100%;
+  }
+  /* Estilo para los campos de entrada del formulario de registro */
+  .container.register .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilo para las etiquetas de los campos del formulario de registro */
+  .container.register label {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Estilo para los campos de entrada de texto del formulario de registro */
+  .container.register .form-control {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  /* Estilo para el botón de registro del formulario */
+  .container.register .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #a844fa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Cambiar el color de fondo del botón al pasar el ratón por encima */
+  .container.register .btn-primary:hover {
+    background-color: #8800f8;
+  }
+  
+  /* Estilo para el enlace "Iniciar sesión" en el formulario de registro */
+  .container.register .mt-3 a {
+    color: #a844fa;
+    text-decoration: none;
+  }
+  
+  /* Cambiar el estilo del enlace "Iniciar sesión" al pasar el ratón por encima */
+  .container.register .mt-3 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Aplicar la fuente Roboto al formulario de registro */
+  .container.register,
+  .container.register h2,
+  .container.register label,
+  .container.register .form-control,
+  .container.register .btn-primary,
+  .container.register .mt-3 a {
+    font-family: "Roboto", sans-serif;
+  }
+  .invalid {
+    color: red;
+  }

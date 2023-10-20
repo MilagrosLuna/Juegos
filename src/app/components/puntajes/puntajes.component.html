@@ -1,0 +1,19 @@
+<div class="container mt-3">
+  <h2>Tabla de Puntuaciones</h2>
+  <div class="row">
+    <div *ngFor="let juego of puntuaciones" class="col-md-4">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ juego.juego }}</h5>
+          <p class="card-text">
+            <strong>Fecha:</strong> {{ juego.fecha }}
+            <br />
+            <strong>Puntaje:</strong> {{ juego.puntaje }}
+            <br/>            
+            <strong>Usuario:</strong> {{ juego.nombre }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

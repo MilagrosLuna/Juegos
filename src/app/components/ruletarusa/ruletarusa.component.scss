@@ -1,0 +1,48 @@
+.roulette-container {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.play-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.play-button:hover {
+  background-color: #0056b3;
+}
+
+.resultado {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.contador {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* Estilos específicos para las imágenes */
+img[src$="assets/a.png"] {
+  max-width: 200px;
+}
+
+img[src$="assets/b.png"] {
+  max-width: 150px;
+}
